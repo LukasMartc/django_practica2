@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Plantilla{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="{% url 'inicio:inicio' %}">Inicio</a></li>
+        <li><a href="{% url 'app1:vista1_app1' %}">Vista 1 App1</a></li>
+        <li><a href="{% url 'app1:vista2_app1' %}">Vista 2 App1</a></li>
+        <li><a href="{% url 'app2:vista1_app2' %}">Vista 1 App2</a></li>
+        <li><a href="{% url 'app2:vista2_app2' %}">Vista 2 App2</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  {% block content %}
+  
+  {% endblock %}
+
+  <footer>
+    <p>&copy; 2025 Mi Proyecto</p>
+  </footer>
+</body>
+</html>
